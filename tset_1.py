@@ -1,6 +1,5 @@
 import csv
 import subprocess
-import csv
 from datetime import datetime
 
 file_path = 'test.csv'
@@ -24,9 +23,9 @@ def get_commits():
     commits = []
     for commit_hash in commit_hashes:
         timestamp = run_git_command(f'show -s --format=%ct {commit_hash}').strip()
-        date = datetime.fromtimestamp(int(timestamp)).strftime('%Y-%m-%d %H:%M:%S')
+        iso8601_timestamp = datetime.utcfromtimestamp(int(timestamp)).isoformat()
         data = parse_csv('test.csv')
-        commits.append({'timestamp': date, 'data': data})
+        commits.append({'timestamp': iso8601_timestamp, 'data': data})
     return commits
 
 
