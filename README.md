@@ -16,4 +16,6 @@ The main program calls these functions and exports the data history to a CSV fil
 3. datetime<br>
 <h2>Installation/Usage</h2>
 To use the tool, first clone the repository you want to track. Then Clone this repository using git clone. Now copy the tset1.py file in the directory of the repository you wanted to track. Set file_path = Name/of/your/file and execute the file. The output CSV file will be generated in the same directory with the name "data_history.csv".
+<h2>License</h2>
+This project is licensed under the MIT license - Please read the LICENSE.md file for more information.
 <h3>Thank You</h3>
